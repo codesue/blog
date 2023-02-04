@@ -1,10 +1,10 @@
 ---
-layout: layouts/home.njk
+layout: page
+permalink: /archive/
 eleventyNavigation:
   key: Archive
   order: 2
 ---
 <h1>Archive</h1>
-
 {% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+{% include "snippets/postslist.njk" %}

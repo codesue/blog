@@ -1,5 +1,6 @@
 ---
-layout: layouts/base.njk
+layout: base
+permalink: /about/
 eleventyNavigation:
   key: About Me
   order: 3
