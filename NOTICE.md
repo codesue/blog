@@ -2,7 +2,10 @@
 
 This project uses substantial portions of the following open source software.
 
-## [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
+
+## Eleventy starter templates
+
+### [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
 
 MIT License
 
@@ -26,7 +29,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## [eleventastic](https://github.com/maxboeck/eleventastic)
+### [eleventastic](https://github.com/maxboeck/eleventastic)
 
 Copyright 2020 Max Böck
 
@@ -47,3 +50,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Fonts
+
+### Fira Code
+
+Favicons were generated using the font Fira Code.
+
+- Author: Copyright 2014-2020 The Fira Code Project Authors (https://github.com/tonsky/FiraCode)
+- Source: http://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sFVfxN87gsj0.ttf
+- License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
