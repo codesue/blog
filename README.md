@@ -17,6 +17,18 @@
 
 ## Getting Started
 
+### 0. Configure git to recurse submodules by default
+
+Blog posts are stored in a separate repo and are made available here as a
+submodule. This allows supported git commands to update submodules by default.
+
+```
+git config --global submodule.recurse true
+```
+
+If you don't want to recurse submodules by default, you can use the flag
+`--recurse-submodules` as needed.
+
 ### 1. Clone this repository
 
 ```
