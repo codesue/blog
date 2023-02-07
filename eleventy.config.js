@@ -29,11 +29,8 @@ module.exports = (eleventyConfig) => {
 	// Markdown customizations
 	eleventyConfig.amendLibrary("md", (mdLib) => {
 		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
-				class: "header-anchor",
-				symbol: "#",
-				ariaHidden: false,
+			permalink: markdownItAnchor.permalink.headerLink({
+				safariReaderFix: true,
 			}),
 			level: [1, 2, 3, 4],
 			slugify: eleventyConfig.getFilter("slugify"),
@@ -41,7 +38,8 @@ module.exports = (eleventyConfig) => {
 	});
 
 	// Layout aliases
-	eleventyConfig.addLayoutAlias("base", "base.njk");
+	eleventyConfig.addLayoutAlias("postlist", "snippets/postlist.njk");
+	eleventyConfig.addLayoutAlias("base", "snippets/base.njk");
 	eleventyConfig.addLayoutAlias("home", "home.njk");
 	eleventyConfig.addLayoutAlias("post", "post.njk");
 

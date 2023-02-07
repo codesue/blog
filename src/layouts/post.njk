@@ -1,40 +1,22 @@
 ---
 layout: base
 ---
-{%- css %} /* Only include the syntax highlighter CSS on blog posts */
-{% include "node_modules/prism-themes/themes/prism-one-dark.min.css" %}
-{% include "../assets/styles/prism-diff.css" %}
-{%- endcss %}
-<h1>{{ title }}</h1>
-<ul class="post-metadata">
-  <li>
-    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-  </li>
-  {%- for tag in tags | filterTagList %}
-    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <li>
-      <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-      {%- if not loop.last %},
-      {% endif %}
-    </li>
-  {%- endfor %}
-</ul>
+
+<h1 class="post-title">
+  <a href="{{ '/' | url }}">{{ title }}</a>
+</h1>
+<p class="post-date">
+  <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+</p>
 {{ content | safe }}
-{%- if collections.posts %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem %}
-  {%- set nextPost = collections.posts | getNextCollectionItem %}
-  {%- if nextPost or previousPost %}
-    <ul class="links-nextprev">
-      {%- if previousPost %}
-        <li>Previous:
-          <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-        </li>
-      {% endif %}
-      {%- if nextPost %}
-        <li>Next:
-          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-        </li>
-      {% endif %}
-    </ul>
-  {%- endif %}
-{%- endif %}
+<div class="cta-subscribe">
+  <hr>
+  <aside class="cta-subscribe-text">
+    <p>If you enjoyed the read, check out
+      <a href="{{ '/posts/' | url }}">another post</a>. Or subscribe to the
+      <a href="{{ '/feed/feed.xml' | url }}">RSS</a>
+      or
+      <a href="{{ '/feed/feed.json' | url }}">JSON</a>
+      feed.</p>
+  </aside>
+</div>

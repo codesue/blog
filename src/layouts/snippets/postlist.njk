@@ -1,0 +1,41 @@
+{% set posts = collections.posts | reverse %}
+{% set archive_url = "/posts/" %}
+{% if posts.length > 0 %}
+  <div class="postlist">
+    {% if show_all_posts %}
+      <ul>
+        {% for post in posts %}
+          {% include "snippets/postlist_item.njk" %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul>
+        {% for post in posts %}
+          {% if loop.index <= metadata.num_posts_to_display %}
+            {% include "snippets/postlist_item.njk" %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% if posts.length > metadata.num_posts_to_display %}
+        {% if page.url == archive_url %}
+          <details>
+            <summary>
+              <span class="linkify">{{ metadata.view_all_posts_text }}</span>
+            </summary>
+            <ul>
+              {% for post in posts %}
+                {% if loop.index > metadata.num_posts_to_display %}
+                  {% include "snippets/postlist_item.njk" %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+        <div class="more-posts-prompt">
+          <a href="{{archive_url | url }}" class="linkify">{{ metadata.view_all_posts_text }}</a>
+        </div>
+        {% endif %}
+      {% endif %}
+    {% endif%}
+  </div>
+{% endif %}

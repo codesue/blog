@@ -24,46 +24,27 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="{{ metadata.theme_color }}">
+
+    {#- Theme Color #}
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="{{ metadata.theme_color }}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="{{ metadata.theme_color_dark }}" media="(prefers-color-scheme: dark)">
 
     {#- RSS Feeds #}
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
     {#- Style  #}
-    {#- CSS bundles are provided via the eleventy-plugin-bundle plugin. #}
-    {#- Add to the CSS bundle #}
-    {%- css %}{% include "../assets/styles/index.css" %}{% endcss %}
-    {%- css %}{# add your own CSS! #}{% endcss %}
-    {#- Render the CSS bundle #}
-    {%- if eleventy.env.runMode === "serve" %}
-      {# Use external files for live reloading during development #}
-      <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-    {%- else %}
-      {# Use inlined CSS for faster performance in production #}
-      <style>{% getBundle "css" %}</style>
-    {%- endif %}
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/css/code.min.css">
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
-    <header>
-      <a href="/" class="home-link">{{ metadata.title }}</a>
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <nav>
-        <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item">
-              <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
-            </li>
-          {%- endfor %}
-        </ul>
-      </nav>
-    </header>
+    {% include "snippets/header.njk" %}
     <main id="skip">
       {{ content | safe }}
     </main>
-    <footer></footer>
+    {% include "snippets/footer.njk" %}
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
   </body>
 </html>

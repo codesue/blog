@@ -1,0 +1,12 @@
+---
+layout: base
+---
+<h1><a href="{{ '/' | url }}">{{ title }}</a></h1>
+{{ content | safe }}
+<h2 id="latest-posts" tabindex="-1">
+  <a class="header-anchor" href="#latest-posts">
+    <span>Latest Posts</span>
+  </a>
+</h2>
+{% set include_excerpt = true %}
+{% include "snippets/postlist.njk" %}

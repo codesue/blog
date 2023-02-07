@@ -1,5 +1,7 @@
 const { DateTime } = require("luxon");
 
+const LOCALE = "en-GB";
+
 module.exports = {
 	ISODate: (dateObj) =>
 		DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO({
@@ -11,6 +13,10 @@ module.exports = {
 		DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
 			format || "dd LLLL yyyy"
 		),
+	shortDate: (dateObj) =>
+		DateTime.fromJSDate(dateObj, { zone: "utc" })
+			.setLocale(LOCALE)
+			.toLocaleString(DateTime.DATE_MED),
 	htmlDateString: (dateObj) =>
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd"),

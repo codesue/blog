@@ -11,9 +11,8 @@
 - webmentions or utterances
 - automatically generated social media preview image
 - minify all the things
-- customizations, e.g. favicons and styles
 - pwa
-- add blog content
+- document posts submodule workflow
 
 ## Getting Started
 
@@ -72,7 +71,16 @@ to the Eleventy docs for [deployment instructions](https://www.11ty.dev/docs/dep
 
 ## Acknowledgements
 
-This project uses substantial portions of the following open source software:
+The basic design of this website is heavily inspired by
+[Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme).
+
+Additionally, this project uses substantial portions of the following open source software:
 
 - [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) by Zach Leatherman
 - [eleventastic](https://github.com/maxboeck/eleventastic) by Max Böck
+- [oak](https://github.com/thesephist/oak) by Linus Lee
+
+The font [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) is used for
+most of the text on this site. The font [Fira Code](https://github.com/tonsky/FiraCode)is used for code snippets and favicons.
+
+The dark theme uses colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.

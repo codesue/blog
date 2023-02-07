@@ -1,0 +1,12 @@
+---
+layout: page
+permalink: /posts/
+title: Posts
+eleventyNavigation:
+  key: Posts
+  order: 1
+---
+
+{% set show_all_posts = true %}
+{% set include_excerpt = true %}
+{% include "snippets/postlist.njk" %}

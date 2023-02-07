@@ -1,0 +1,562 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/WorkSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/WorkSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/WorkSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/WorkSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/WorkSans-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/WorkSans-SemiBold-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/FiraCode-Medium.woff2') format('woff2');
+}
+
+:root {
+  --font-family: "Work Sans", system-ui, sans-serif;
+  --font-family-monospace: "Fira Code", "Menlo", monospace;
+  --font-weight-bold: 600;
+  --logo-font-weight: 700;
+  --heading-font-weight: 400;
+  --nav-item-font-size: 1.125em;
+  --font-size-small: calc(1em - 2px);
+  --inline-code-font-size: .875em;
+  --code-font-size: .925em;
+  --table-font-size: 1em;
+}
+
+/* COLORS */
+
+:root {
+  --background-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 25%);
+  --secondary-text-color: hsl(0, 0, 61%);
+  --highlight-color: hsla(54, 100%, 62%, 0.4);
+  --highlight-color-deep: hsla(54, 100%, 62%, 0.9);
+  --code-background-color: hsl(240, 33%, 96%);
+  --table-border-color: hsl(240, 33%, 96%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: hsl(236, 23%, 12%);
+    --text-color: hsl(227, 68%, 88%);
+    --secondary-text-color: hsl(227, 27%, 72%);
+    --highlight-color: hsl(355, 71%, 77%, 0.4);
+    --highlight-color-deep: hsl(355, 71%, 77%, 0.6);
+    --code-background-color: hsl(232, 23%, 18%);
+    --table-border-color: hsl(232, 23%, 18%);
+  }
+
+   img.dark-mode-invert {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
+}
+
+/* GENERAL */
+
+:root {
+  --title-alignment: center;
+  --code-tab-size: 2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  height: 100%;
+}
+
+html {
+  overflow-y: auto;
+}
+
+body {
+  max-width: 40em;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--heading-font-weight);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+  padding-top: .35em;
+  padding-bottom: .35em;
+}
+
+h1 {
+  margin-top: 1em;
+  font-size: 2em;
+  text-align: var(--title-alignment);
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p,
+li {
+  line-height: 1.5em;
+  margin: 1em 0;
+  max-width: 64ch;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+
+a,
+.linkify {
+  color: inherit;
+  text-decoration: none;
+}
+
+p>a:not([class]),
+li>a:not([class]),
+.linkify {
+  background: linear-gradient(to right, var(--highlight-color), var(--highlight-color-deep));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition-property: background-position;
+  transition-duration: 300ms;
+  padding: 0;
+}
+
+p>a:not([class]):hover,
+li>a:not([class]):hover,
+.linkify {
+  background-position: 100% 100%;
+}
+
+.linkify {
+  cursor: pointer;
+}
+
+.external-link:after {
+  content: "↗";
+  font-size: .7em;
+  position: relative;
+  top: -.25em;
+  padding-left: .1em;
+}
+
+/* Main */
+
+main {
+  padding: 1rem;
+}
+
+main :first-child {
+  margin-top: 0;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  gap: 1em .5em;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+}
+
+.home-link {
+  font-size: var(--nav-item-font-size);
+  font-weight: var(--logo-font-weight);
+  margin-right: 1.5em;
+}
+
+/* Nav */
+
+.nav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: var(--nav-item-font-size);
+  text-transform: lowercase;
+}
+
+.nav-item a[href] {
+  background: none;
+}
+
+/* Footer */
+
+body>footer {
+  position: sticky;
+  top: 100vh;
+}
+
+footer {
+  font-size: var(--font-family);
+  color: var(--secondary-text-color);
+  margin-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Images */
+
+/* See https://developer.mozilla.org/en-US/docs/Learn/Performance/Multimedia */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Code */
+pre,
+code,
+kbd {
+  font-family: var(--font-family-monospace);
+  tab-size: var(--code-tab-size);
+}
+
+pre {
+  display: block;
+  margin: 1.5em 0;
+  border-radius: 6px;
+  background: var(--code-background-color);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre>code,
+code[class*="language-"],
+pre[class*="language-"] {
+  display: block;
+  padding: 1em;
+  font-size: var(--code-font-size);
+  -webkit-text-size-adjust: none;
+}
+
+code,
+kbd {
+  background: var(--code-background-color);
+}
+
+code {
+  word-break: break-all;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+p code,
+p kbd,
+li code,
+li kbd {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: var(--inline-code-font-size);
+}
+
+/* Quotes */
+
+blockquote {
+  font-style: italic;
+}
+
+blockquote em,
+blockquote pre {
+  font-style: normal;
+}
+
+/* Captions */
+
+figcaption,
+table caption {
+  text-align: center;
+  font-style: italic;
+  margin: .75em 0;
+}
+
+/* Tables */
+
+table {
+  text-align: left;
+  line-height: 1.5em;
+  border-collapse: collapse;
+  margin: 2em 0;
+  width: 100%;
+  border: 1px solid var(--table-border-color);
+}
+
+th,
+td {
+  padding: .4em;
+  letter-spacing: .5px;
+  border-bottom: 1px solid var(--table-border-color);
+  border-left: 1px solid var(--table-border-color);
+}
+
+th {
+  font-weight: 500;
+}
+
+td {
+  font-size: var(--table-font-size);
+}
+
+/* Details */
+
+details {
+  margin: 1em 0;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary>h2,
+summary>h3,
+summary>h4 {
+  display: inline;
+  margin-left: 8px;
+}
+
+/* Thematic break (horizontal rule) */
+hr {
+  border: 0;
+  margin: 2em 0;
+}
+
+hr::after {
+  content: '* * *';
+  display: block;
+  width: 100%;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-family: var(--font-family-monospace);
+}
+
+/* Post title */
+
+.post-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Post date */
+
+.post-date {
+  text-align: var(--title-alignment);
+  margin-bottom: 2em;
+  padding-top: 0;
+  padding-bottom: .35em;
+  font-weight: 500;
+  line-height: .8rem;
+}
+
+/* Posts list */
+.postlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.postlist-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+.postlist-date {
+  color: var(--secondary-text-color);
+  font-size: var(--font-size-small);
+  font-style: italic;
+  word-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.postlist-link {
+  flex-basis: calc(100% - 1.5rem);
+  font-weight: 500;
+}
+
+.postlist-item-active .postlist-link {
+  font-style: italic;
+}
+
+.postlist details summary::-webkit-details-marker {
+  display: none;
+}
+
+.postlist details>summary {
+  list-style: none;
+}
+
+.postlist details[open] summary {
+  display: none;
+}
+
+.more-posts-prompt,
+.postlist summary {
+  margin-top: 2em;
+}
+
+/* Post tags */
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+.postlist-item>.post-tag {
+  align-self: center;
+}
+
+/* Post tags list */
+.post-metadata {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Call to action */
+
+.cta-subscribe {
+  text-align: var(--title-alignment);
+}
+
+.cta-subscribe hr {
+  margin-top: 3em;
+  margin-bottom: .75em;
+}
+
+.cta-subscribe-text {
+  font-style: italic;
+}
+
+/* See https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* A TOUCH OF WHIMSY */
+
+.redacted {
+  background: var(--c-text);
+  color: var(--c-text);
+}
+
+.redacted:hover,
+.redacted::selection {
+  background: var(--c-bg);
+  color: var(--c-text);
+  transition-duration: 500ms;
+}

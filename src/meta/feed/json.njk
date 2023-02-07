@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
   "description": "{{ metadata.description }}",
   "author": {
     "name": "{{ metadata.author.name }}",
-    "url": "{{ metadata.author.url }}"
+    "url": "{{ metadata.author.homepage }}"
   },
   "items": [{%- for post in collections.posts | reverse %}{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}{
         "id": "{{ absolutePostUrl }}",
