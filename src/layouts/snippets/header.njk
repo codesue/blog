@@ -9,11 +9,9 @@
           <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
         </li>
       {%- endfor %}
-      {%- for name, entry in external_nav_links %}
-        <li class="nav-item">
-          <a class="external-link" href="{{ entry.link }}" target="_blank" rel="noopener noreferrer">{{ entry.text }}</a>
-        </li>
-      {%- endfor %}
+      <li class="nav-item">
+        <a class="external-link" href="https://github.com/codesue/blog" target="_blank" rel="noopener noreferrer">Source</a>
+      </li>
     </ul>
   </nav>
 </header>

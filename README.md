@@ -5,13 +5,15 @@
 ## Features
 
 - Supports all [eleventy-base-blog v8 features](https://github.com/11ty/eleventy-base-blog/tree/c9595d8f42752fa72c66991c71f281ea960840c9#features)
+- Blog posts as a private submodule
+- Light and dark theme based on system preferences
+- PWA
 
 ✨ TODO:
 
 - webmentions or utterances
 - automatically generated social media preview image
 - minify all the things
-- pwa
 - document posts submodule workflow
 
 ## Getting Started
@@ -81,6 +83,7 @@ Additionally, this project uses substantial portions of the following open sourc
 - [oak](https://github.com/thesephist/oak) by Linus Lee
 
 The font [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) is used for
-most of the text on this site. The font [Fira Code](https://github.com/tonsky/FiraCode)is used for code snippets and favicons.
+most of the text on this site. The font [Fira Code](https://github.com/tonsky/FiraCode)
+is used for code snippets and favicons.
 
 The dark theme uses colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.

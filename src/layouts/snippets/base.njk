@@ -34,6 +34,11 @@
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
+    {# Me #}
+    {%- for profile, profile_url in metadata.author.social %}
+      <link rel="me" value="{{ profile_url }}" />
+    {%- endfor %}
+
     {#- Style  #}
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="stylesheet" href="/assets/css/code.min.css">
@@ -46,5 +51,10 @@
     </main>
     {% include "snippets/footer.njk" %}
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/serviceworker.js")
+      }
+    </script>
   </body>
 </html>

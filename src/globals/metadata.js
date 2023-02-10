@@ -12,9 +12,12 @@ module.exports = {
 		name: "Suzen Fylke",
 		homepage: "https://suzenfylke.com",
 		blog: "https://sprakfika.se",
-		microblog: "https://sigmoid.social/@suzenfylke",
-		github: "https://github.com/codesue",
-		linkedin: "https://linkedin.com/in/suzenfylke",
-		readcv: "https://read.cv/suzenfylke",
+		social: {
+			github: "https://github.com/codesue",
+			linkedin: "https://linkedin.com/in/suzenfylke",
+			readcv: "https://read.cv/suzenfylke",
+			mastodon: "https://sigmoid.social/@suzenfylke",
+			twitter: "https://twitter.com/suzenfylke",
+		},
 	},
 };
