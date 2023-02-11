@@ -17,7 +17,21 @@
       <meta property="article:published_time" content="{{ page.date | ISODate }}">
     {%- endif %}
 
+    {# Canonical URL #}
     <link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}">
+
+    {#- RSS Feeds #}
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+    {#- Webmentions #}
+    <link rel="webmention" href="https://webmention.io/codesue.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/codesue.com/xmlrpc" />
+
+    {#- Me #}
+    {%- for profile, profile_url in metadata.author.social %}
+      <link rel="me" href="{{ profile_url }}" />
+    {%- endfor %}
 
     {#- Favicon #}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,18 +44,9 @@
     <meta name="theme-color" content="{{ metadata.theme_color }}" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="{{ metadata.theme_color_dark }}" media="(prefers-color-scheme: dark)">
 
-    {#- RSS Feeds #}
-    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-
-    {# Me #}
-    {%- for profile, profile_url in metadata.author.social %}
-      <link rel="me" href="{{ profile_url }}" />
-    {%- endfor %}
-
     {#- Style  #}
     <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="stylesheet" href="/assets/css/code.min.css">
+    <link rel="stylesheet" href="/assets/styles/code.min.css">
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>

@@ -11,10 +11,8 @@
 
 ✨ TODO:
 
-- webmentions or utterances
 - automatically generated social media preview image
 - minify all the things
-- document posts submodule workflow
 
 ## Getting Started
 
@@ -56,7 +54,11 @@ npm start
 
 ## Next steps
 
-Edit config and content files. When you're happy with all your changes, refer
+Edit config and content files. If editing posts, commit and push your changes to
+the submodule's repo directly, then update the blog repo using
+`git submodule update --remote`.
+
+When you're happy with all your changes, refer
 to the Eleventy docs for [deployment instructions](https://www.11ty.dev/docs/deployment/).
 
 ## Folder Structure
