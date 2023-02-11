@@ -36,7 +36,7 @@
 
     {# Me #}
     {%- for profile, profile_url in metadata.author.social %}
-      <link rel="me" value="{{ profile_url }}" />
+      <link rel="me" href="{{ profile_url }}" />
     {%- endfor %}
 
     {#- Style  #}

@@ -1,6 +1,6 @@
 # blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fb1b42e3-a4e3-404e-8ba3-13e9a9a55ffa/deploy-status)](https://app.netlify.com/sites/lustrous-pothos-c9f217/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fb1b42e3-a4e3-404e-8ba3-13e9a9a55ffa/deploy-status)](https://app.netlify.com/sites/codesue/deploys)
 
 ## Features
 
