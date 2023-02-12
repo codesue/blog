@@ -47,6 +47,9 @@
 
     {#- Style  #}
     <link rel="stylesheet" href="/assets/styles/main.css">
+
+    {#- Scripts #}
+    <script src="/pwa.js" defer></script>
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
@@ -56,10 +59,5 @@
     </main>
     {% include "snippets/footer.njk" %}
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
-    <script type="text/javascript">
-      if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("/serviceworker.js")
-      }
-    </script>
   </body>
 </html>

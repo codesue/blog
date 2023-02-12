@@ -7,6 +7,7 @@ const EleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 const filters = require("./utils/filters");
+const transforms = require("./utils/transforms");
 
 module.exports = (eleventyConfig) => {
 	// Official and third-party plugins
@@ -46,6 +47,11 @@ module.exports = (eleventyConfig) => {
 	// Filters
 	Object.keys(filters).forEach((filterName) => {
 		eleventyConfig.addFilter(filterName, filters[filterName]);
+	});
+
+	// Transforms
+	Object.keys(transforms).forEach((transformName) => {
+		eleventyConfig.addTransform(transformName, transforms[transformName]);
 	});
 
 	// Watch targets

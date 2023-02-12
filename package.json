@@ -37,6 +37,7 @@
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
 		"del-cli": "^5.0.0",
 		"eslint-config-wesbos": "^3.2.3",
+		"html-minifier": "^4.0.0",
 		"luxon": "^3.2.1",
 		"markdown-it-anchor": "^8.6.6"
 	},
