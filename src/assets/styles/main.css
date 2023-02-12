@@ -85,8 +85,20 @@
   --secondary-text-color: hsl(0, 0, 61%);
   --highlight-color: hsla(54, 100%, 62%, 0.4);
   --highlight-color-deep: hsla(54, 100%, 62%, 0.9);
-  --code-background-color: hsl(240, 33%, 96%);
   --table-border-color: hsl(240, 33%, 96%);
+  --code-background-color: hsl(220, 23%, 95%);
+  --code-theme-flamingo: hsl(0, 60%, 67%);
+  --code-theme-mauve: hsl(266, 85%, 58%);
+  --code-theme-red: hsl(347, 87%, 44%);
+  --code-theme-peach: hsl(22, 99%, 52%);
+  --code-theme-yellow: hsl(40, 62%, 73%);
+  --code-theme-green: hsl(109, 58%, 40%);
+  --code-theme-teal: hsl(183, 74%, 35%);
+  --code-theme-sky: hsl(197, 97%, 46%);
+  --code-theme-blue: hsl(220, 91%, 54%);
+  --code-theme-text: hsl(234, 16%, 35%);
+	--code-theme-subtext0: hsl(233, 10%, 47%);
+  --code-theme-overlay1: hsl(231, 10%, 59%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,8 +108,20 @@
     --secondary-text-color: hsl(227, 27%, 72%);
     --highlight-color: hsl(355, 71%, 77%, 0.4);
     --highlight-color-deep: hsl(355, 71%, 77%, 0.6);
-    --code-background-color: hsl(232, 23%, 18%);
     --table-border-color: hsl(232, 23%, 18%);
+    --code-background-color: hsl(232, 23%, 18%);
+    --code-theme-flamingo: hsl(0, 58%, 86%);
+    --code-theme-mauve: hsl(267, 83%, 80%);
+    --code-theme-red: hsl(351, 74%, 73%);
+    --code-theme-peach: hsl(21, 86%, 73%);
+    --code-theme-yellow: hsl(40, 70%, 78%);
+    --code-theme-green: hsl(105, 48%, 72%);
+    --code-theme-teal: hsl(171, 47%, 69%);
+    --code-theme-sky: hsl(189, 59%, 73%);
+    --code-theme-blue: hsl(220, 83%, 75%);
+    --code-theme-text: hsl(227, 68%, 88%);
+		--code-theme-subtext0: hsl(227, 27%, 72%);
+    --code-theme-overlay1: hsl(228, 15%, 57%);
   }
 
    img.dark-mode-invert {
@@ -559,4 +583,149 @@ hr::after {
   background: var(--c-bg);
   color: var(--c-text);
   transition-duration: 500ms;
+}
+
+/* PRISM.JS TOKENS */
+
+.token.comment {
+	color: var(--code-theme-subtext0);
+	font-style: italic;
+}
+
+.token.prolog {
+	color: var(--code-theme-subtext0);
+}
+
+.token.cdata {
+	color: var(--code-theme-subtext0);
+}
+
+.token.doctype {
+	color: var(--code-theme-overlay1);
+}
+
+.token.punctuation {
+	color: var(--code-theme-overlay1);
+}
+
+.token.entity {
+	color: var(--code-theme-overlay1);
+}
+
+.token.attr-name {
+	color: var(--code-theme-blue);
+}
+
+.token.boolean {
+	color: var(--code-theme-peach);
+}
+
+.token.constant {
+	color: var(--code-theme-peach);
+}
+
+.token.number {
+	color: var(--code-theme-peach);
+}
+
+.token.atrule {
+	color: var(--code-theme-peach);
+}
+
+.token.keyword {
+	color: var(--code-theme-red);
+}
+
+.token.property {
+	color: var(--code-theme-blue);
+}
+
+.token.tag {
+	color: var(--code-theme-mauve);
+}
+
+.token.symbol {
+	color: var(--code-theme-sky);
+}
+
+.token.deleted {
+	color: var(--code-theme-teal);
+}
+
+.token.important {
+	color: var(--code-theme-teal);
+}
+
+.token.selector {
+	color: var(--code-theme-red);
+}
+
+.token.string {
+	color: var(--code-theme-green);
+}
+
+.token.char {
+	color: var(--code-theme-yellow);
+}
+
+.token.builtin {
+	color: var(--code-theme-text);
+}
+
+.token.inserted {
+	color: var(--code-theme-green);
+}
+
+.token.regex {
+	color: var(--code-theme-sky);
+}
+
+.token.attr-value {
+	color: var(--code-theme-sky);
+}
+
+.token.variable {
+	color: var(--code-theme-flamingo);
+}
+
+.token.operator {
+	color: var(--code-theme-sky);
+}
+
+.token.function {
+	color: var(--code-theme-blue);
+  font-style: italic;
+}
+
+.token.url {
+	color: var(--code-theme-yellow);
+}
+
+.token.changed {
+  color: var(--code-theme-peach);
+}
+
+.token.class-name {
+  color: var(--code-theme-peach);
+}
+
+.token.hexcode {
+  color: var(--code-theme-yellow);
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	color: var(--code-theme-overlay1);
+	cursor: help;
+}
+
+.token.namespace {
+	opacity: 0.7;
 }

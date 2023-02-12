@@ -99,4 +99,4 @@ Below is the attribution provided with the icons:
 
 # Color
 
-The dark theme uses colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.
+The dark theme and code blocks use colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.

@@ -56,10 +56,6 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
 	eleventyConfig.addPassthroughCopy("./src/assets/images/");
 	eleventyConfig.addPassthroughCopy("./src/assets/styles/");
-	eleventyConfig.addPassthroughCopy({
-		"./node_modules/prism-themes/themes/prism-one-dark.min.css":
-			"/assets/styles/code.min.css",
-	});
 	// NOTE: If the passthrough copy gets heavy and cumbersome, emulate the file
 	// copy on the dev server by uncommenting the following line
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");

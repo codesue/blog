@@ -88,4 +88,4 @@ The font [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) is used for
 most of the text on this site. The font [Fira Code](https://github.com/tonsky/FiraCode)
 is used for code snippets and favicons.
 
-The dark theme uses colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.
+The dark theme and code blocks use colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.
