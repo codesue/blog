@@ -1,6 +1,6 @@
 # NOTICE
 
-The basic design of this website is heavily inspired by
+The basic design of this website is inspired by
 [Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme).
 
 Additionally, this project uses substantial portions of the following open source

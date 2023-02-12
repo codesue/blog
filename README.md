@@ -1,18 +1,25 @@
 # blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fb1b42e3-a4e3-404e-8ba3-13e9a9a55ffa/deploy-status)](https://app.netlify.com/sites/codesue/deploys)
+Source code for [codesue.com](https://codesue.com).
 
-## Features
+Code and content © 2023 [Suzen Fylke](https://suzenfylke.com).
 
-- Supports all [eleventy-base-blog v8 features](https://github.com/11ty/eleventy-base-blog/tree/c9595d8f42752fa72c66991c71f281ea960840c9#features)
-- Blog posts as a private submodule
-- Light and dark theme based on system preferences
-- PWA
+This project intentionally has [no license](https://choosealicense.com/no-permission/)
+and does not accept external contributions.
 
-✨ TODO:
+## Acknowledgements
 
-- automatically generated social media preview image
-- minify all the things
+This project is inspired by or uses substantial portions of the following software:
+
+- Built with the [Eleventy](https://www.11ty.dev) static site generator.
+- Based on the starter templates
+[eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) by Zach Leatherman
+and [eleventastic](https://github.com/maxboeck/eleventastic) by Max Böck.
+- Design inspired by [Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme)
+and Linus Lee's [oak](https://github.com/thesephist/oak) website.
+- Uses [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) for general typography.
+- Uses [Fira Code](https://github.com/tonsky/FiraCode) for code snippets and favicons.
+- Uses [Catppuccin](https://github.com/catppuccin/catppuccin) for dark theme and code blocks.
 
 ## Getting Started
 
@@ -61,6 +68,9 @@ the submodule's repo directly, then update the blog repo using
 When you're happy with all your changes, refer
 to the Eleventy docs for [deployment instructions](https://www.11ty.dev/docs/deployment/).
 
+The website is configured to deploy to Netlify on new commits to the main branch
+of this repo.
+
 ## Folder Structure
 
 - `/`: various config and informational files
@@ -72,20 +82,3 @@ to the Eleventy docs for [deployment instructions](https://www.11ty.dev/docs/dep
 - `src/pages/`: pages
 - `src/posts/`: blog posts
 - `utils/`: filters, shortcodes, transforms, and local plugins
-
-## Acknowledgements
-
-The basic design of this website is heavily inspired by
-[Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme).
-
-Additionally, this project uses substantial portions of the following open source software:
-
-- [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) by Zach Leatherman
-- [eleventastic](https://github.com/maxboeck/eleventastic) by Max Böck
-- [oak](https://github.com/thesephist/oak) by Linus Lee
-
-The font [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) is used for
-most of the text on this site. The font [Fira Code](https://github.com/tonsky/FiraCode)
-is used for code snippets and favicons.
-
-The dark theme and code blocks use colors from [Catppuccin](https://github.com/catppuccin/catppuccin) palettes.
