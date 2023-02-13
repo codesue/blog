@@ -2,6 +2,13 @@
 
 The basic design of this website is inspired by
 [Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme).
+The parts of Manuel's theme used in this website include:
+
+- text and background color of the light theme
+- yellow highlighter link style
+- details element to view all posts in the archive
+- h1 elements linking to the homepage
+- styling of the view more posts / subscribe prompt
 
 Additionally, this project uses substantial portions of the following open source
 software.
