@@ -1,8 +1,10 @@
+const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
 
 const LOCALE = "en-GB";
 
 module.exports = {
+	cssmin: (code) => new CleanCSS({}).minify(code).styles,
 	ISODate: (dateObj) =>
 		DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO({
 			includeOffset: false,

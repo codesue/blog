@@ -1,85 +1,12 @@
-/* FONTS */
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/WorkSans-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/WorkSans-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/WorkSans-SemiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/WorkSans-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/WorkSans-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/WorkSans-SemiBold-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/FiraCode-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/FiraCode-Medium.woff2') format('woff2');
-}
-
 :root {
+  /* typography */
   --font-family: "Work Sans", system-ui, sans-serif;
-  --font-family-monospace: "Fira Code", "Menlo", monospace;
+  --font-family-monospace: "Fira Code", Menlo, monospace;
   --font-weight-bold: 600;
-  --logo-font-weight: 700;
   --heading-font-weight: 400;
-  --nav-item-font-size: 1.125em;
-  --font-size-small: calc(1em - 2px);
-  --inline-code-font-size: .875em;
-  --code-font-size: .925em;
-  --table-font-size: 1em;
-}
-
-/* COLORS */
-
-:root {
+  /* alignment */
+  --title-alignment: center;
+  /* colors */
   --background-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 25%);
   --secondary-text-color: hsl(0, 0, 61%);
@@ -132,13 +59,6 @@
   img {
     filter: brightness(.8) contrast(1.2);
   }
-}
-
-/* GENERAL */
-
-:root {
-  --title-alignment: center;
-  --code-tab-size: 2;
 }
 
 * {
@@ -275,8 +195,8 @@ header {
 }
 
 .home-link {
-  font-size: var(--nav-item-font-size);
-  font-weight: var(--logo-font-weight);
+  font-size: 1.125em;
+  font-weight: var(--font-weight-bold);
   margin-right: 1.5em;
 }
 
@@ -292,7 +212,7 @@ header {
 .nav-item {
   display: inline-block;
   margin-right: 1em;
-  font-size: var(--nav-item-font-size);
+  font-size: 1.125em;
   text-transform: lowercase;
 }
 
@@ -336,7 +256,7 @@ pre,
 code,
 kbd {
   font-family: var(--font-family-monospace);
-  tab-size: var(--code-tab-size);
+  tab-size: 2;
 }
 
 pre {
@@ -353,7 +273,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   display: block;
   padding: 1em;
-  font-size: var(--code-font-size);
+  font-size: .925em;
   -webkit-text-size-adjust: none;
 }
 
@@ -376,7 +296,7 @@ li code,
 li kbd {
   padding: 2px 4px;
   border-radius: 4px;
-  font-size: var(--inline-code-font-size);
+  font-size: .875em;
 }
 
 /* Quotes */
@@ -420,10 +340,6 @@ td {
 
 th {
   font-weight: 500;
-}
-
-td {
-  font-size: var(--table-font-size);
 }
 
 /* Details */
@@ -491,7 +407,7 @@ hr::after {
 
 .postlist-date {
   color: var(--secondary-text-color);
-  font-size: var(--font-size-small);
+  font-size: calc(1em - 2px);
   font-style: italic;
   word-spacing: -0.5px;
   white-space: nowrap;

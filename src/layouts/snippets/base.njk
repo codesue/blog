@@ -46,7 +46,13 @@
     <meta name="theme-color" content="{{ metadata.theme_color_dark }}" media="(prefers-color-scheme: dark)">
 
     {#- Style  #}
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="preload" href="/assets/fonts/WorkSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/WorkSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    {% set css %}
+      {% include "../../assets/styles/fonts.css" %}
+      {% include "../../assets/styles/main.css" %}
+    {% endset %}
+    <style>{{ css | cssmin | safe }}</style>
 
     {#- Scripts #}
     <script src="/pwa.js" defer></script>
