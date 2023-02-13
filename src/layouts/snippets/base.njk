@@ -6,6 +6,9 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
 
+    {# Generator #}
+    <meta name="generator" content="Eleventy">
+
     {#- Sharing and SEO #}
     <meta property="og:site_name" content="{{ metadata.title }}">
     <meta property="og:title" content="{{ title or metadata.title}}">
