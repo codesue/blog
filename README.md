@@ -9,17 +9,16 @@ and does not accept external contributions.
 
 ## Acknowledgements
 
-This project is inspired by or uses substantial portions of the following software:
-
-- Built with the [Eleventy](https://www.11ty.dev) static site generator.
-- Based on the starter templates
-[eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) by Zach Leatherman
-and [eleventastic](https://github.com/maxboeck/eleventastic) by Max Böck.
-- Design inspired by [Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme)
+The website's design is inspired by [Manuel Moreale's Website Theme](https://manuelmoreale.gumroad.com/l/manuwebsitetheme)
 and Linus Lee's [oak](https://github.com/thesephist/oak) website.
-- Uses [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) for general typography.
-- Uses [Fira Code](https://github.com/tonsky/FiraCode) for code snippets and favicons.
-- Uses [Catppuccin](https://github.com/catppuccin/catppuccin) for dark theme and code blocks.
+
+Additionally, this project uses substantial portions of the following software:
+
+- [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) starter template by Zach Leatherman
+- [eleventastic](https://github.com/maxboeck/eleventastic) starter template by Max Böck
+- [Work Sans](https://github.com/weiweihuanghuang/Work-Sans) font
+- [Fira Code](https://github.com/tonsky/FiraCode) font
+- [Catppuccin](https://github.com/catppuccin/catppuccin) color palettes
 
 ## Getting Started
 
