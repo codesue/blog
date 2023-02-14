@@ -45,3 +45,9 @@
   font-display: swap;
   src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2');
 }
+
+:root {
+  --font-family: "Work Sans", system-ui, sans-serif;
+  --font-family-monospace: "Fira Code", Menlo, monospace;
+  --font-weight-bold: 600;
+}
