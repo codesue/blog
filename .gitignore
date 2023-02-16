@@ -16,3 +16,8 @@ dist/
 
 # Local Netlify folder
 .netlify
+
+# Python examples
+.ipynb_checkpoints
+.python_version
+**/gradio_cached_examples
