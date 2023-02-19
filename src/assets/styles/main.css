@@ -129,7 +129,7 @@ li>a:not([class]),
 
 p>a:not([class]):hover,
 li>a:not([class]):hover,
-.linkify {
+.linkify:hover {
   background-position: 100% 100%;
 }
 
