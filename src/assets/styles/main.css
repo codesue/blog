@@ -220,6 +220,11 @@ figure {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1em;
+}
+
+figure:has( + h2, + h3 ) {
+  padding-bottom: 0;
 }
 
 .wrapper {
