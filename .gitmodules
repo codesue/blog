@@ -1,3 +1,6 @@
 [submodule "src/posts"]
 	path = src/posts
 	url = git@github.com:codesue/posts.git
+[submodule "src/assets/images"]
+	path = src/assets/images
+	url = https://github.com/codesue/images.git
